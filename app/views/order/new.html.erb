@@ -1,0 +1,33 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-5 col-md-3">
+      <div class="form-login">
+        <a href="/admin">Admin</a>
+        <h4>Welcome back.</h4>
+        <%= simple_form_for @order, url: create_order_url, as: 'order'  do |f| %>
+
+            <%= f.input :product_id do %>
+                <%= f.select :product_id, Product.all.map { |r| [r.name, r.id ] }, include_blank: false, :class=>"form-control input-sm chat-input" %>
+            <% end %>
+
+            <%= f.input :quantity, placeholder: 'quantity', :class=>"form-control input-sm chat-input" %>
+
+            <%= f.input :state_id do %>
+                <%= f.select :state_id, State.all.map { |r| [r.name, r.id ] }, include_blank: false, :class=>"form-control input-sm chat-input" %>
+            <% end %>
+
+
+
+            <%= f.button :submit, :class=>"btn btn-primary btn-md" %>
+        <% end %>
+
+        <
+      </div>
+
+    </div>
+  </div>
+</div>

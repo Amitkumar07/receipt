@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: MyString
+  decimal: MyString
+  state_id: 1
+  category_id: 1
+
+two:
+  amount: MyString
+  decimal: MyString
+  state_id: 1
+  category_id: 1
